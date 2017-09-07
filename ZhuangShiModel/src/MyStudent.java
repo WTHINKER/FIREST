@@ -1,4 +1,4 @@
-
+//в╟йндёй╫
 public class MyStudent implements Stady{
 
 	private Stady stady;
