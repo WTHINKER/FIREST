@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.user">root</property>
+		<property name="hibernate.connection.password">274117</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/personal</property>
+		<!-- 数据库方言 -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL57InnoDBDialect</property>
+		<!-- 在控制台打印输出Hibernate底层执行的SQL语句 -->
+		<!-- 显示执行的SQL语句 -->
+		<property name="hibernate.show_sql">true</property>
+		<!-- 格式化显示执行的SQL语句 -->
+		<property name="hibernate.format_sql">true</property>
+
+
+		<mapping class="com.unique.OneToOne.People" />
+		<mapping class="com.unique.OneToOne.IdCard" />
+
+
+		<mapping class="com.unique.onetoone2.Certification" />
+		<mapping class="com.unique.onetoone2.Person" />
+		<!-- 配置xml解析 -->
+		<!-- <mapping resource="com/fif/hibernateday01/pojo/PrettyUser.hbm.xml"/> -->
+	</session-factory>
+
+</hibernate-configuration>

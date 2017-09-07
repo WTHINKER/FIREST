@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fif.hibernateday01.pojo.PrettyUser" table="t_user">
+		<id name="id" column="id" type="integer">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="name" type="string"></property>
+		<property name="birthday" column="birthday" type="date"></property>
+		<property name="sex" column="sex" type="string"></property>
+	</class>
+</hibernate-mapping>

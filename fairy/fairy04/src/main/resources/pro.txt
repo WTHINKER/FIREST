@@ -1,0 +1,4 @@
+该子方法是说明hibernate的一对多实例！！！
+
+解惑：
+只有OneToOne,OneToMany,ManyToMany上才有mappedBy属性，ManyToOne不存在该属性；

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../config/ehcache.xsd">
+
+    <!--
+    The ehcache-failsafe.xml is a default configuration for ehcache, if an ehcache.xml is not configured.
+    -->
+   <diskStore path="d:/tempdir"/>
+    <!-- 这里只是配置了构建缓存空间的参数，
+    当Hiberante加载了该配置文件过后，会根据这些参数构建/开辟相应的缓存空间，
+    该缓存空间即为二级缓存空间。 -->
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="true"
+            maxElementsOnDisk="10000000"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"
+            />
+    <cache name="mCache" 
+           maxElementsInMemory="1000" 
+           eternal="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="120"
+           overflowToDisk="false" 
+           memoryStoreEvictionPolicy="LRU"/>
+</ehcache>
+

@@ -1,0 +1,8 @@
+解释：
+@Id表示表中字段，该字段为主键。
+@GeneratedValue(strategy=GenerationType.IDENTITY)表示该字段为自增长，相当于表中increment。
+@Column表示表中普通字段。
+
+@OneToMany(targetEntity=Emp.class（该属性表示对应的哪个类）,fetch=FetchType.LAZY（lazy表示在取出这条数据时，不会取用它相关联的数据。而eager属性，则会取用它相关联的数据）,orphanRemoval=true（如果删除关系，是否删除关系上的实体）)表示一对多关系。
+@Cascade(value= {CascadeType.SAVE_UPDATE,CascadeType.DELETE_ORPHAN,CascadeType.DELETE})
+@JoinColumn(name="deptid")表示两个表之间的关系连接字段
